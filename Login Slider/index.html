@@ -47,13 +47,21 @@
             const signupBtn = document.querySelector('.signupBtn');
             const formBx = document.querySelector('.formBx');
             const body = document.querySelector('body');
-
+            
+            
+            
             signupBtn.onclick = function(){
+                var formBxTeste = document.querySelector('.formBx').className;
+                
                 formBx.classList.add('active');
+                console.log(formBxTeste.indexOf('active') !== -1);
                 body.classList.add('active');
             };
-
+            
+            
             signinBtn.onclick = function(){
+                var formBxTeste = document.querySelector('.formBx').className;
+                console.log(formBxTeste.indexOf('active') !== -1);
                 formBx.classList.remove('active');
                 body.classList.remove('active');
             };
@@ -61,3 +69,37 @@
     </body>
 </html>
 
+        <script>
+
+            changeLogo = (type) => {
+                const logoTdc = document.querySelector(".logoTdc");
+                const logoLuluzinha = document.querySelector(".logoLuluzinha");
+                const logoOliver = document.querySelector(".logoOliver");
+                const logoMylu = document.querySelector(".logoMylu");
+
+                let confTdc = document.querySelector('.logoTdc').className;
+                let confLuluzinha = document.querySelector('.logoLuluzinha').className;
+                let confOliver = document.querySelector('.logoOliver').className;
+                let confMylu = document.querySelector('.logoMylu').className;
+
+                if(type === "tdc"){
+                    if(confTdc.indexOf('active') !== -1){
+
+                    }
+
+                    if(confLuluzinha.indexOf('active') !== -1){
+
+                    }else if(confOliver.indexOf('active') !== -1){
+
+                    }else if(confMylu.indexOf('active') !== -1){
+                        
+                    }
+                }else if(type === "luluzinha"){
+
+                }else if(type === "mylu"){
+                    
+                }else if(type === "oliver"){
+                    
+                }
+            }
+        </script>
