@@ -23,3 +23,9 @@ newYear = () => {
 setInterval(() => {
     newYear();
 }, 1000);
+
+
+toggle = () => {
+    let newsletter = document.querySelector(".newsletter");
+    newsletter.classList.toggle("active");
+}
