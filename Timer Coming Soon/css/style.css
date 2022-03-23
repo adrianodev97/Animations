@@ -223,3 +223,77 @@ section .sci li a i {
     font-size: 30px;
     cursor: pointer;
 }
+
+@media (max-width: 991px){
+    section {
+        flex-direction: column;
+        padding-top: 150px;
+        height: auto;
+    }
+
+    section .contentBx {
+        max-width: 100%;
+
+    }
+
+    section .contentBx img {
+        margin-top: 0;
+    }
+
+    section .imgBx img {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px){
+    header {
+        padding: 20px 50px;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 150px 20px 50px;
+        height: auto;
+    }
+
+    section .contentBx h2 {
+        font-size: 40px;
+    }
+
+    section .contentBx h2 {
+        font-size: 26px;
+    }
+
+    section .contentBx .countdown .time {
+        font-size: 30px;
+        min-width: 70px;
+        margin-right: 5px;
+    }
+
+    section .contentBx .countdown .time span {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    section .contentBx a {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+
+    section .sci {
+        left: 50px;
+    }
+
+    .newsletter {
+        width: 90%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .newsletter .inputBox input[type="submit"],
+    .newsletter .inputBox input {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
