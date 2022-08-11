@@ -42,11 +42,18 @@ a {
     text-decoration: none;
     background-color: #fff;
     border-radius: 20px;
+    margin: 20px;
     padding: 25px;
     box-sizing: border-box;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
-    border: 1px solid rgba(0, 0, 0, .8);
+    border: 1px solid rgba(0, 0, 0, .1);
     overflow: hidden;
+    transition: all ease .3s;
+}
+
+.product-box:hover {
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, .1);
+    transform: scale(1.008);
     transition: all ease .3s;
 }
 
@@ -68,13 +75,13 @@ a {
     margin: 20px auto;
 }
 
-.available-color {
+.available-colors {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.available-color .product-color {
+.available-colors .product-color {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -82,4 +89,74 @@ a {
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: inset 2px 2px 30px rgba(0, 0, 0, .3);
     margin: 3px;
+}
+
+.buy-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+.buy-price p{
+    color: #6e6e73;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    max-width: 250px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buy-price .buy-btn {
+    color: #fff;
+    background-color: #0071e3;
+    text-decoration: none;
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lSPager {
+    display: none;
+}
+
+.lSAction > a {
+    background-color: #00000033;
+    width: 50px;
+    height: 50px ;
+    background-image: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lSAction > a::after {
+    position: absolute;
+    content: "";
+    margin: auto;
+    border: solid #ffffff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.lSAction > .lSPrev::after {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.lSAction > .lSNext::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
