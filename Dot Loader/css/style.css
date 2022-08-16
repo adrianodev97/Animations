@@ -15,10 +15,10 @@ body {
 }
 
 .load .dot {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    margin: 10px;
+    margin: 5px;
     display: inline-block;
     background-color: rgba(6, 205, 240, 1);
     transform: scale(.2);
