@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla Animations</title>
+  <style>
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      width: 100%;
+      background-color: #FFF;
+      border-radius: 6px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform .3s;
+    }
+
+    .card a {
+      width: 100%;
+      height: 100%;
+      padding: 16px 0;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Vanilla Animations</h1>
+    <section class="container" />
+  </main>
+
+  <script>
+    fetch('animations.json')
+      .then(response => response.json())
+      .then(animations => {
+        const container = document.querySelector('.container');
+
+        animations.forEach(animation => {
+          const card = document.createElement('div');
+          card.className = 'card';
+
+          const link = document.createElement('a');
+          link.href = animation.link;
+          link.textContent = animation.name;
+
+          card.appendChild(link);
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+
+</html>
