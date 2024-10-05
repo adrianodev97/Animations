@@ -6,11 +6,14 @@ const App = () => {
 		<main>
 			<h1>React Animations</h1>
 			<section className="container">
-				{routes.map(({ path, title }) => (
-					<div className="card" key={path}>
-						<a href={path}>{title}</a>
-					</div>
-				))}
+				{routes.map(
+					({ path, animation }) =>
+						animation && (
+							<div className="card" key={path}>
+								<a href={path}>{animation}</a>
+							</div>
+						),
+				)}
 			</section>
 		</main>
 	);

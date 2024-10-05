@@ -5,7 +5,11 @@ export const routes = [
 	{
 		path: "/",
 		element: <App />,
-		title: "Home",
+	},
+	{
+		path: "/any",
+		element: <></>,
+		animation: "Any animation",
 	},
 ];
 
